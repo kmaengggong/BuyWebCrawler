@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "org.example"
+group = "org.kmaengggong"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -17,4 +17,10 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.withType<Jar>{
+    manifest {
+        attributes["Main-Class"] = "org.kmaengggong.Main"
+    }
 }
